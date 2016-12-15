@@ -31,7 +31,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Inicia session</p>
+    <p class="login-box-msg">Inicia sessioooooon</p>
 
     <form action="<?php echo base_url();?>clogin" method="post">
       <div class="form-group has-feedback">
