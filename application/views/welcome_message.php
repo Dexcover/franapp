@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter-Version de Prueba</title>
+	<title>Welcome to CodeIgniter-Version de Prueba diego</title>
 
 	<style type="text/css">
 
