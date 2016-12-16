@@ -8,16 +8,40 @@
  			function __construct()
  			{
  				parent::__construct();
+<<<<<<< Updated upstream
 
  				
+=======
+ 				$this->load->model('mlogin');
+>>>>>>> Stashed changes
  			}
  		
  	
  	public function index()
 	{
+		$data['mensaje']="";
+		$this->load->view('login/vlogin',$data);
 		
-		$this->load->view('login/vlogin');
-		
+	}
+	public function ingresar(){
+		$usu = $this->input->post('txtuser');
+		$pass = $this->input->post('txtpass');
+
+		$res = $this->mlogin->ingresar($usu,$pass);
+
+		if($res==1){
+			$this->load->view('layout/header');
+			$this->load->view('layout/menu');
+			$this->load->view('vcrearcliente');
+			$this->load->view('layout/footer');
+		}else{
+			$data['mensaje']="Usuario o contraseña incorrecta.";
+			$this->load->view('login/vlogin',$data);
+		}
+	}
+	public function logout(){
+		$this->session->sess_destroy();
+		header("Location:" . base_url());
 	}
 
 

@@ -7,6 +7,7 @@ class Mlogin extends CI_Model
 	
 	
 	public function ingresar($usu,$pass){
+<<<<<<< Updated upstream
 		
 		//Realizo la consulta hacia la base
 		$this->db->select('id_usuario,nombres,id_rol,clave');
@@ -15,6 +16,12 @@ class Mlogin extends CI_Model
 		$this->db->where('clave',md5($pass));
 
 		//guardo la consulta 
+=======
+		$this->db->select('ID_USUARIO, NOMBRES, ROL, NOMBREUSUARIO');
+		$this->db->from('usuarios');
+		$this->db->where('NOMBREUSUARIO',$usu);
+		$this->db->where('CLAVE',$pass);
+>>>>>>> Stashed changes
 		$resultado = $this->db->get();
 
 		//compruebo si hubo resultados
@@ -22,9 +29,16 @@ class Mlogin extends CI_Model
 			$r = $resultado->row();
 
 			$s_usuario = array(
+<<<<<<< Updated upstream
 				's_idUsuario' => $r->id_usuario,
 				's_nUsuario' => $r->nombres,
 				's_idRol' => $r ->id_rol
+=======
+				's_IDUSUARIO' => $r->ID_USUARIO,
+				's_NOMBRES' => $r->NOMBRES,
+				's_ROL'=> $r->ROL,
+				's_NOMBREUSUARIO'=> $r->NOMBREUSUARIO
+>>>>>>> Stashed changes
 				);
 			
 			//referencio la libreria de sesion
@@ -42,4 +56,5 @@ class Mlogin extends CI_Model
 		}
 		
 	}
+
 }

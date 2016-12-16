@@ -38,6 +38,7 @@ if (!empty($info))
   <div class="login-box-body">
     <p class="login-box-msg">Inicia session</p>
 
+<<<<<<< Updated upstream
 <?php echo form_open('clogin/iniciar'); ?>
     
       <div class="form-group has-feedback">
@@ -46,6 +47,15 @@ if (!empty($info))
       </div>
       <div class="form-group has-feedback">
         <input type="password" class="form-control" placeholder="Password" name="password">
+=======
+    <form action="<?php echo base_url();?>clogin/ingresar" method="post">
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="txtuser" placeholder="Usuario">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" name="txtpass" placeholder="Password">
+>>>>>>> Stashed changes
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -62,6 +72,7 @@ if (!empty($info))
         </div>
         <!-- /.col -->
       </div>
+      <p class="bg-red"><?php echo $mensaje; ?></p>
     </form>
 
   </div>
