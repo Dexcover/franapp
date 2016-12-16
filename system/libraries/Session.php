@@ -27,7 +27,7 @@
  */
 class CI_Session {
 
-	var $sess_encrypt_cookie		= TRUE;
+	var $sess_encrypt_cookie		= FALSE;
 	var $sess_use_database			= FALSE;
 	var $sess_table_name			= '';
 	var $sess_expiration			= 7200;
@@ -40,7 +40,7 @@ class CI_Session {
 	var $cookie_domain				= '';
 	var $cookie_secure				= FALSE;
 	var $sess_time_to_update		= 300;
-	var $encryption_key				= 'franapp';
+	var $encryption_key				= '';
 	var $flashdata_key				= 'flash';
 	var $time_reference				= 'time';
 	var $gc_probability				= 5;
