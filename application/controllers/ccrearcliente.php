@@ -23,7 +23,7 @@ class Ccrearcliente extends CI_Controller
 
 
 public function crearcliente()
-		{
+		{	
 
 			//call to varibales in the view
 			
