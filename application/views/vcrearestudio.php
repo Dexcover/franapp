@@ -1,4 +1,15 @@
 <head>
+  <script src="<?php echo base_url();?>assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- bootstrap datepicker -->
+<script src="<?php echo base_url();?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- bootstrap color picker -->
+
+<!-- bootstrap time picker -->
+<script src="<?php echo base_url();?>assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<!-- S
 
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css">
@@ -30,6 +41,9 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+
+
 </head>
 <section class="content">
 	<div class="box box-primary">
@@ -205,6 +219,7 @@
   </div>
 </section>
 
+<!-- Page script -->
 
 <!-- Page script -->
 <script>
