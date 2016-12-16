@@ -2677,6 +2677,7 @@ a:focus {
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
   border-bottom-width: 2px;
+  width: 37%;
 }
 .table.no-border,
 .table.no-border td,
