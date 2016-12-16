@@ -14,9 +14,18 @@
  	
  	public function index()
 	{
+		if(empty($this->session->userdata('s_IDUSUARIO')))
+		{
 		$data['mensaje']="";
 		$this->load->view('login/vlogin',$data);
-		
+		}else
+		{
+
+			$this->load->view('layout/header');
+			$this->load->view('layout/menu');
+			$this->load->view('vcrearcliente');
+			$this->load->view('layout/footer');
+		}
 	}
 	public function ingresar(){
 		$usu = $this->input->post('txtuser');
