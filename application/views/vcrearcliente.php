@@ -8,7 +8,7 @@
                       <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     </div>
         </div>
-        <form role="form" action="<?php echo base_url();?>ccrearcliente/crearcliente">
+        <form role="form" action="<?php echo base_url();?>ccrearcliente/crearcliente" method="post">
                     <div class="box-body">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Nombre del Cliente</label>
@@ -23,7 +23,9 @@
                       <button type="submit" class="btn btn-primary">Crear</button>
                     </div>
                     </div>
-                    <p><?php echo $mensaje; ?></p>
+                    <p><?php 
+                    if(!empty($mensaje))
+                    echo $mensaje; ?></p>
         </form>
       </div>
     </div>
