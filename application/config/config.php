@@ -232,11 +232,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-<<<<<<< Updated upstream
-$config['encryption_key'] = 'franapp';
-=======
 $config['encryption_key'] = 'qwerty';
->>>>>>> Stashed changes
 
 /*
 |--------------------------------------------------------------------------
