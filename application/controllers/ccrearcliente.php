@@ -14,10 +14,13 @@ class Ccrearcliente extends CI_Controller
 	
 	
 	public function index(){
-		$this->load->view('layout/header');
-		$this->load->view('layout/menu');
-		$this->load->view('vcrearcliente');
-		$this->load->view('layout/footer');
+		$data['clientes']=$this->Mcliente->obtenerClientes();
+
+			$this->load->view('layout/header');
+			$this->load->view('layout/menu');
+			$this->load->view('vcrearcliente',$data);
+			$this->load->view('layout/footer');
+
 	}
 
 

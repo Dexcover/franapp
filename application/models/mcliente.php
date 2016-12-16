@@ -21,7 +21,7 @@
 
 		public function obtenerClientes()
 		{
-
+			
 			$query = $this->db->get('ACTORES');
 	        return $query->result_array();
 

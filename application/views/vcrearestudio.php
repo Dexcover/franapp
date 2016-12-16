@@ -65,9 +65,7 @@
                 <select class="form-control select2" style="width: 100%;">
                   <option value="disabled" selected="selected">Cliente</option>
                   <?php foreach ($clientes as $c): ?>
-                   
-                  
-                  <option value="disabled"> <?php echo $c['N_CLIENTE']; ?></option>
+                  <option value="<?php echo $c['ID_CLIENTE']; ?>"> <?php echo $c['N_CLIENTE']; ?></option>
                   <?php endforeach; ?>
                 </select>
               </div>
@@ -104,7 +102,7 @@
                   <option selected="selected">Tipo de Estudio</option>
                   <?php foreach ($tipos as $t): ?>
                                   
-                  <option value="disabled"> <?php echo $t['N_TIPO']; ?></option>
+                  <option value="<?php echo $c['ID_TIPO']; ?>"> <?php echo $t['N_TIPO']; ?></option>
                   <?php endforeach; ?>
                 </select>
               </div>

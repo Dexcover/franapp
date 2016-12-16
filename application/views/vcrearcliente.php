@@ -57,60 +57,23 @@
                     </thead>
                     <tbody>
                     <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 4.0
-                      </td>
-                      <td>Win 95+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.0
-                      </td>
-                      <td>Win 95+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.5
-                      </td>
-                      <td>Win 95+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 6
-                      </td>
-                      <td>Win 98+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet Explorer 7</td>
-                      <td>Win XP SP2+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet Explorer 7</td>
-                      <td>Win XP SP2+</td>
-                      
-                    </tr>
+                    
+
+                     <?php foreach ($clientes as $c): ?>
+                    <tr>              
+                  <td><?php echo $c['N_CLIENTE']; ?></td>
+                  <td><?php echo $c['RUC']; ?></td>
+                  <td><?php echo $c['ID_USUARIO']; ?></td>
+                  </tr>
+                  <?php endforeach; ?>
+
+
+
+                  
                     
                     
                     </tbody>
-                    <tfoot>
-                    <tr>
-                      <th>Rendering engine</th>
-                      <th>Browser</th>
-                      <th>Platform(s)</th>
-                      
-                    </tr>
-                    </tfoot>
+                   
                   </table>
                 </div>
                 <!-- /.box-body -->
