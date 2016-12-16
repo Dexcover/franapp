@@ -28,7 +28,7 @@
         <li><a href="<?php echo base_url();?>ccrearcliente"><i class="fa fa-user-plus"></i> <span>Crear Cliente</span></a></li>
         <li><a href="<?php echo base_url();?>ccrearestudio"><i class="fa fa-bar-chart"></i> <span>Crear Estudio</span></a></li>
         <li class="header">MANEJO DE BASE DE DATOS</li>
-        <li><a href="#"><i class="fa  fa-map"></i> <span>Importar y mapear archivos</span></a></li>
+        <li><a href="<?php echo base_url();?>cimportarmapear"><i class="fa  fa-map"></i> <span>Importar y mapear archivos</span></a></li>
         <li class="header">REPORTE</li>
         <li><a href="#"><i class="fa  fa-file-excel-o"></i> <span>Ratio Report</span></a></li>
         <li><a href="#"><i class="fa  fa-file-excel-o"></i> <span>Regresión</span></a></li>
