@@ -1,3 +1,4 @@
+
 </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -241,5 +242,8 @@
 <script src="<?php echo base_url();?>assets/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url();?>assets/dist/js/demo.js"></script>
+<!-- date-range-picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
 </body>
 </html>

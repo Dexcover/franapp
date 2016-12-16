@@ -25,11 +25,6 @@
   <![endif]-->
 </head>
 <body class="hold-transition login-page">
-<div class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong><?php
-if (!empty($info))
- echo $info ?> </div>
-
-
 <div class="login-box">
   <div class="login-logo">
     <a href="../../index2.html"><b>FranApp</a>
@@ -38,21 +33,20 @@ if (!empty($info))
   <div class="login-box-body">
     <p class="login-box-msg">Inicia session</p>
 
-<?php echo form_open('clogin/iniciar'); ?>
-    
+    <form action="<?php echo base_url();?>clogin/ingresar" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Usuario" name="usuario">
+        <input type="text" class="form-control" name="txtuser" placeholder="Usuario">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="password">
+        <input type="password" class="form-control" name="txtpass" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <input type="checkbox"> Recordarme
+              <input type="checkbox"> Rrcordarme
             </label>
           </div>
         </div>
@@ -62,6 +56,7 @@ if (!empty($info))
         </div>
         <!-- /.col -->
       </div>
+      <p class="bg-red"><?php echo $mensaje; ?></p>
     </form>
 
   </div>
