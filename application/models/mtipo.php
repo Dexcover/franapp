@@ -1,6 +1,6 @@
 <?php 
 
-	class Mstudio extends CI_Model
+	class Mtipo extends CI_Model
 	{
 
 		public function getTipos()

@@ -10,14 +10,14 @@ class Ccrearestudio extends CI_Controller
 
  			//call data from model
 			$this->load->model('Mcliente');
-			$this->load->model('Mstudio');
+			$this->load->model('Mtipo');
 
  			}
 
  			
 	public function index(){
-		$data['clientes']=verclientes();
-		$data['tipos']=vertipos();
+		$data['clientes']=$this->verclientes();
+		$data['tipos']=$this->vertipos();
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/menu');
@@ -43,7 +43,7 @@ class Ccrearestudio extends CI_Controller
 	public function vertipos()
 	{
 
-		return $this->Mstudio->getTipos();
+		return $this->Mtipo->getTipos();
 
 	}
 
