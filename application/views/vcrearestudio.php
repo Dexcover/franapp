@@ -145,6 +145,17 @@
           <div class="box-footer">
             <button type="submit" class="btn btn-primary">Crear</button>
           </div>
+          <div class="col-xs-12">
+                      <div class="col-xs-5">
+                      </div>
+                        <div class="col-xs-3">
+                          <p>
+                            <?php if(!empty($mensaje)) echo $mensaje; ?>
+                          </p>
+                        </div>
+                      <div class="col-xs-3">
+                      </div>
+                    </div>
         </form>
       </div>
       <div class="row">
