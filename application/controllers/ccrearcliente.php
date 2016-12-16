@@ -8,7 +8,8 @@ class Ccrearcliente extends CI_Controller
 		function __construct()
  			{
  				parent::__construct();
- 				
+ 				//llamo al modelo para crear cliente
+				$this->load->model('Mcliente');
  			}
 	
 	
@@ -43,6 +44,6 @@ public function crearcliente()
 			$this->load->view('', $data);
 
 		}
-	
+
 }
 ?>
