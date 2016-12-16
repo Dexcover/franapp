@@ -116,16 +116,9 @@
                   <input type="text" class="form-control"  name="numerocompañia" placeholder="Numero">
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Fuente</label>
-                  <select name="fuente" class="form-control select2" style="width: 100%;">
-                    <option selected="selected">Fuente</option>
-                  </select>
-                </div>
-              </div>
+              
               <!-- /.col -->
-              <div class="col-md-12">
+              <div class="col-md-6">
                 <div class="form-group">
                   <label>Date range:</label>
 
@@ -189,53 +182,16 @@
                       <td>Internet
                         Explorer 4.0
                       </td>
-                      <td>Win 95+</td>
+                      <td><button type="button" class="btn btn-warning">Clonar</button><button type="button" class="btn btn-info">Actualizar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
                       
                     </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.0
-                      </td>
-                      <td>Win 95+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.5
-                      </td>
-                      <td>Win 95+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 6
-                      </td>
-                      <td>Win 98+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet Explorer 7</td>
-                      <td>Win XP SP2+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet Explorer 7</td>
-                      <td>Win XP SP2+</td>
-                      
-                    </tr>
-                    
-                    
+                   
                     </tbody>
                     <tfoot>
                     <tr>
                       <th>Tipo de Estudio</th>
                       <th>Año fiscal</th>
-                      <th>Acción</th>
+                      <th style="width: 25%;">Acción</th>
                       
                     </tr>
                     </tfoot>

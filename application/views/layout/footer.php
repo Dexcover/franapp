@@ -233,24 +233,24 @@
 <script src="<?php echo base_url();?>assets/dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url();?>assets/dist/js/demo.js"></script>
-<<<<<<< HEAD
+
 <!-- date-range-picker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-=======
+
 <!-- Page script -->
->>>>>>> 92cd1ebfc3e6da6acb039e24d6c278e175b50c2c
+
 <script>
   $(function () {
     //Initialize Select2 Elements
     $(".select2").select2();
 
-<<<<<<< HEAD
+
 
     //Date range picker
     $('#reservation',).daterangepicker();
     //Date range picker with time picker
    
-=======
+
     //Datemask dd/mm/yyyy
     $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
     //Datemask2 mm/dd/yyyy
@@ -263,7 +263,7 @@
     //Date range picker with time picker
     $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
     //Date range as a button
->>>>>>> 92cd1ebfc3e6da6acb039e24d6c278e175b50c2c
+
     $('#daterange-btn').daterangepicker(
         {
           ranges: {
@@ -282,9 +282,7 @@
         }
     );
 
-<<<<<<< HEAD
-    
-=======
+
     //Date picker
     $('#datepicker').datepicker({
       autoclose: true
@@ -315,7 +313,7 @@
     $(".timepicker").timepicker({
       showInputs: false
     });
->>>>>>> 92cd1ebfc3e6da6acb039e24d6c278e175b50c2c
+
   });
 </script>
 </body>
