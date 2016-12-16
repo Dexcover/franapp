@@ -7,11 +7,14 @@ class Ccrearestudio extends CI_Controller
 	function __construct()
  			{
  				parent::__construct();
- 				//call data from model
+
+ 			//call data from model
 			$this->load->model('Mcliente');
 			$this->load->model('Mstudio');
 
  			}
+
+ 			
 	public function index(){
 		$data['clientes']=verclientes();
 		$data['tipos']=vertipos();
@@ -43,6 +46,8 @@ class Ccrearestudio extends CI_Controller
 		return $this->Mstudio->getTipos();
 
 	}
+
+
 
 
 

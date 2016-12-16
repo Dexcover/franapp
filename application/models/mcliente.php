@@ -8,6 +8,8 @@
 
 			$data=array(
 				
+
+
 				'ID_USUARIO'=>$id_usuario,
 				'N_CLIENTE'=>$n_cliente,
 				'RUC'=>$ruc

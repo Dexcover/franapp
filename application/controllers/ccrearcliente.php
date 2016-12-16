@@ -23,8 +23,8 @@ class Ccrearcliente extends CI_Controller
 
 
 public function crearcliente()
-		{	
 
+		{	
 			//call to varibales in the view
 			
 			$id_usuario=$this->session->userdata('s_IDUSUARIO');
@@ -46,11 +46,14 @@ public function crearcliente()
 
 			//call data from model
 			$data['clientes']=$this->Mcliente->obtenerClientes();
+
 			$this->load->view('layout/header');
 			$this->load->view('layout/menu');
 			$this->load->view('vcrearcliente',$data);
 			$this->load->view('layout/footer');
 			
+
+
 
 		}
 
