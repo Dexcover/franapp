@@ -48,8 +48,11 @@
                 <label>Cliente</label>
                 <select class="form-control select2" style="width: 100%;">
                   <option value="disabled" selected="selected">Cliente</option>
+                  <?php foreach ($clientes as $c): ?>
+                   
                   
-                  
+                  <option value="disabled"> <?php echo $c['N_CLIENTE']; ?></option>
+                  <?php endforeach; ?>
                 </select>
               </div>
              <div class="form-group">
@@ -82,11 +85,11 @@
               <div class="form-group">
                 <label>Tipo de Estudio</label>
                 <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">Actualización búsqueda y/o comparables</option>
-                  <option>Análisis de regresión</option>
-                  <option>Carta de actualización rango</option>
-                  <option>Carta de diagnóstico</option>
-                  <option>Informe de precios de transferencia</option>
+                  <option selected="selected">Tipo de Estudio</option>
+                  <?php foreach ($tipos as $t): ?>
+                                  
+                  <option value="disabled"> <?php echo $t['N_TIPO']; ?></option>
+                  <?php endforeach; ?>
                 </select>
               </div>
               <!-- /.form-group -->
