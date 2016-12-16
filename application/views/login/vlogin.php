@@ -25,6 +25,11 @@
   <![endif]-->
 </head>
 <body class="hold-transition login-page">
+<div class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong><?php
+if (!empty($info))
+ echo $info ?> </div>
+
+
 <div class="login-box">
   <div class="login-logo">
     <a href="../../index2.html"><b>FranApp</a>
@@ -33,20 +38,21 @@
   <div class="login-box-body">
     <p class="login-box-msg">Inicia session</p>
 
-    <form action="<?php echo base_url();?>clogin" method="post">
+<?php echo form_open('clogin/iniciar'); ?>
+    
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Usuario">
+        <input type="text" class="form-control" placeholder="Usuario" name="usuario">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" placeholder="Password" name="password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <input type="checkbox"> Rrcordarme
+              <input type="checkbox"> Recordarme
             </label>
           </div>
         </div>
