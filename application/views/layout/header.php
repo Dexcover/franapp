@@ -7,6 +7,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
+  
   <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -82,7 +83,7 @@ if (!$this->session->userdata('s_IDUSUARIO')) {
                 <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  <?php echo $this->session->userdata('s_NOMBREUSUARIO'); ?> - <?php echo $this->session->userdata('s_ROL'); ?>
+                  <?php echo $this->session->userdata('s_NOMBRES'); ?> - <?php echo $this->session->userdata('s_IDROL'); ?>
                   
                 </p>
               </li>

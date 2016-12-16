@@ -8,31 +8,22 @@
                       <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     </div>
         </div>
-        <form role="form">
+        <form role="form" action="<?php echo base_url();?>ccrearcliente/crearcliente">
                     <div class="box-body">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Nombre del Cliente</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" name="txtnombre" placeholder="Enter email">
+                        <input type="text" class="form-control"  name="nombre_cliente" placeholder="Nombre">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail1">Ruc del Cliente</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" name="txtnombre" placeholder="Enter email">
-                      </div>
-                      <div class="form-group">
-                        <label>Autor</label>
-                        <select class="form-control select2" style="width: 100%;">
-                          <option selected="selected">Asistente</option>
-                          <option>Asistene</option>
-                          <option>Senior</option>
-                          <option>Gerente</option>
-                          <option>Socio</option>
-                        </select>
+                        <input type="text" class="form-control"  name="ruc" placeholder="Ruc">
                       </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
                       <button type="submit" class="btn btn-primary">Crear</button>
                     </div>
                     </div>
+                    <p><?php echo $mensaje; ?></p>
         </form>
       </div>
     </div>
@@ -45,6 +36,14 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
+                 <div class="form-group">
+                <label>Cliente</label>
+                <select class="form-control select2" style="width: 100%;">
+                  <option value="disabled" selected="selected">Cliente</option>
+                  
+                  
+                </select>
+              </div>
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>

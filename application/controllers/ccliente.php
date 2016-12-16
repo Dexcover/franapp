@@ -1,28 +1,19 @@
 <?php 
-/**
-* 
-*/
-class Ccrearcliente extends CI_Controller
+
+
+class Ccliente extends CI_Controller 
 {
-	
+
 		function __construct()
- 			{
- 				parent::__construct();
- 				//llamo al modelo para crear cliente
-				$this->load->model('Mcliente');
- 			}
-	
-	
-	public function index(){
-		$this->load->view('layout/header');
-		$this->load->view('layout/menu');
-		$this->load->view('vcrearcliente');
-		$this->load->view('layout/footer');
-	}
+		{
+			parent:: __construct();
+			//llamo al modelo para crear cliente
+			$this->load->model('Mcliente');
+
+		}
 
 
-
-public function crearcliente()
+		public function crearcliente()
 		{
 
 			//call to varibales in the view
@@ -45,5 +36,7 @@ public function crearcliente()
 
 		}
 
+
 }
-?>
+
+ ?>
