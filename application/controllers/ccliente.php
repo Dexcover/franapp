@@ -31,7 +31,7 @@ class Ccliente extends CI_Controller
 		{
 
 			//call data from model
-			$data=$this->Mcliente->obtenerClientes();
+			$data['clientes']=$this->Mcliente->obtenerClientes();
 			$this->load->view('', $data);
 
 		}
