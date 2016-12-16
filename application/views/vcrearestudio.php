@@ -1,5 +1,6 @@
 <head>
 
+
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -30,6 +31,21 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+  <script src="<?php echo base_url();?>assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+
+<!-- date-range-picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap datepicker -->
+<script src="<?php echo base_url();?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- bootstrap color picker -->
+<script src="<?php echo base_url();?>assets/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+<!-- bootstrap time picker -->
+<script src="<?php echo base_url();?>assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+
+
 </head>
 <section class="content">
 	<div class="box box-primary">
@@ -48,8 +64,11 @@
                 <label>Cliente</label>
                 <select class="form-control select2" style="width: 100%;">
                   <option value="disabled" selected="selected">Cliente</option>
+                  <?php foreach ($clientes as $c): ?>
+                   
                   
-                  
+                  <option value="disabled"> <?php echo $c['N_CLIENTE']; ?></option>
+                  <?php endforeach; ?>
                 </select>
               </div>
              <div class="form-group">
@@ -82,11 +101,11 @@
               <div class="form-group">
                 <label>Tipo de Estudio</label>
                 <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">Actualización búsqueda y/o comparables</option>
-                  <option>Análisis de regresión</option>
-                  <option>Carta de actualización rango</option>
-                  <option>Carta de diagnóstico</option>
-                  <option>Informe de precios de transferencia</option>
+                  <option selected="selected">Tipo de Estudio</option>
+                  <?php foreach ($tipos as $t): ?>
+                                  
+                  <option value="disabled"> <?php echo $t['N_TIPO']; ?></option>
+                  <?php endforeach; ?>
                 </select>
               </div>
               <!-- /.form-group -->
@@ -201,34 +220,9 @@
       </div>
   </div>
 </section>
-<script src="<?php echo base_url();?>assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
-<!-- Select2 -->
-<script src="<?php echo base_url();?>assets/plugins/select2/select2.full.min.js"></script>
-<!-- InputMask -->
-<script src="<?php echo base_url();?>assets/plugins/input-mask/jquery.inputmask.js"></script>
-<script src="<?php echo base_url();?>assets/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="<?php echo base_url();?>assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
-<!-- date-range-picker -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<script src="<?php echo base_url();?>assets/plugins/daterangepicker/daterangepicker.js"></script>
-<!-- bootstrap datepicker -->
-<script src="<?php echo base_url();?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
-<!-- bootstrap color picker -->
-<script src="<?php echo base_url();?>assets/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
-<!-- bootstrap time picker -->
-<script src="<?php echo base_url();?>assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
-<!-- SlimScroll 1.3.0 -->
-<script src="<?php echo base_url();?>assets/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- iCheck 1.0.1 -->
-<script src="<?php echo base_url();?>assets/plugins/iCheck/icheck.min.js"></script>
-<!-- FastClick -->
-<script src="<?php echo base_url();?>assets/plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="<?php echo base_url();?>assets/dist/js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?php echo base_url();?>assets/dist/js/demo.js"></script>
+
+<!-- Page script -->
+
 <!-- Page script -->
 <script>
   $(function () {
