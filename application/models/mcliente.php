@@ -19,12 +19,28 @@
 
 		}
 
-		public function obtenerClientes()
+		public function obtenerClientes($id_usuario)
 		{
+			if($id_usuario==1)
+		{
+			$this->db->select('ID_CLIENTE ,N_CLIENTE, RUC, NOMBRES');
+			$this->db->from('ACTORES');
+			$this->db->join('USUARIOS','ACTORES.ID_USUARIO=USUARIOS.ID_USUARIO');
+			
+			$query = $this->db->get();
+	        return $query->result_array();
+			
+	     }else
+	     {
 
-			$query = $this->db->get('ACTORES');
+	     	$this->db->select('ID_CLIENTE ,N_CLIENTE, RUC, NOMBRES');
+			$this->db->from('ACTORES');
+			$this->db->join('USUARIOS','ACTORES.ID_USUARIO=USUARIOS.ID_USUARIO');
+			$this->db->where('ACTORES.ID_USUARIO',$id_usuario);
+			$query = $this->db->get();
 	        return $query->result_array();
 
+	     }
 		}
 
 
