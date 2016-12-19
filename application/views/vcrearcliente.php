@@ -65,12 +65,13 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td>emet.ca</td>
-                      <td>170981273</td>
-                      <td>Administrador</td>
-                      
-                    </tr>
+                  <?php foreach ($clientes as $c): ?>
+                  <tr>              
+                  <td><?php echo $c['N_CLIENTE']; ?></td>
+                  <td><?php echo $c['RUC']; ?></td>
+                  <td><?php echo $c['NOMBRES']; ?></td>
+                  </tr>
+                  <?php endforeach; ?>
                     </tbody>
                     <tfoot>
                     <tr>
