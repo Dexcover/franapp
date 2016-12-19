@@ -56,81 +56,100 @@
             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
           </div>
         </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Cliente</label>
-                <select class="form-control select2" style="width: 100%;">
-                  <option value="disabled" selected="selected">Cliente</option>
-                  <?php foreach ($clientes as $c): ?>
-                   
-                  
-                  <option value="disabled"> <?php echo $c['N_CLIENTE']; ?></option>
-                  <?php endforeach; ?>
-                </select>
-              </div>
-             <div class="form-group">
-                <label>Año de Analisis</label>
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">2015</option>
-                  <option>2014</option>
-                  <option>2013</option>
-                  <option>2012</option>
-                  <option>2011</option>
-                  <option>2010</option>
-                </select>
-              </div>
-              <!-- /.form-group -->
-            </div>
-            <!-- /.col -->
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Año Fiscal</label>
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">2015</option>
-                  <option>2014</option>
-                  <option>2013</option>
-                  <option>2012</option>
-                  <option>2011</option>
-                  <option>2010</option>
-                </select>
-              </div>
-              <!-- /.form-group -->
-              <div class="form-group">
-                <label>Tipo de Estudio</label>
-                <select class="form-control select2" style="width: 100%;">
-                  <option selected="selected">Tipo de Estudio</option>
-                  <?php foreach ($tipos as $t): ?>
-                                  
-                  <option value="disabled"> <?php echo $t['N_TIPO']; ?></option>
-                  <?php endforeach; ?>
-                </select>
-              </div>
-              <!-- /.form-group -->
-            </div>
-            <!-- /.col -->
-            <div class="col-md-12">
-            <div class="form-group">
-                <label>Date range:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control pull-right" id="reservation">
+        <form role="form">
+          <!-- /.box-header -->
+          <div class="box-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Cliente</label>
+                  <select name="cliente" class="form-control select2" style="width: 100%;">
+                    <option value="disabled" selected="selected">Cliente</option>
+                    <?php foreach ($clientes as $c): ?>
+                    <option value="disabled"> <?php echo $c['N_CLIENTE']; ?></option>
+                    <?php endforeach; ?>
+                  </select>
                 </div>
-                <!-- /.input group -->
+               <div class="form-group">
+                  <label>Años de Analisis</label>
+                  <select name="añoanalisis" class="form-control select2" style="width: 100%;">
+                    <option selected="selected">2015</option>
+                    <option>2014</option>
+                    <option>2013</option>
+                    <option>2012</option>
+                    <option>2011</option>
+                    <option>2010</option>
+                  </select>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              
+              <!-- /.col -->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Año Fiscal</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">2015</option>
+                    <option>2014</option>
+                    <option>2013</option>
+                    <option>2012</option>
+                    <option>2011</option>
+                    <option>2010</option>
+                  </select>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                  <label>Tipo de Estudio</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Tipo de Estudio</option>
+                    <?php foreach ($tipos as $t): ?>
+                                    
+                    <option value="disabled"> <?php echo $t['N_TIPO']; ?></option>
+                    <?php endforeach; ?>
+                  </select>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Numero de Compañia a Comparar</label>
+                  <input type="text" class="form-control"  name="numerocompañia" placeholder="Numero">
+                </div>
+              </div>
+              
+              <!-- /.col -->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Date range:</label>
+
+                  <div class="input-group">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" id="reservation">
+                  </div>
+                  <!-- /.input group -->
+                </div>
               </div>
             </div>
+            <!-- /.row -->
           </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.box-body -->
-        <div class="box-footer">
+          <!-- /.box-body -->
+          <div class="box-footer">
             <button type="submit" class="btn btn-primary">Crear</button>
-        </div>
+          </div>
+          <div class="col-xs-12">
+                      <div class="col-xs-5">
+                      </div>
+                        <div class="col-xs-3">
+                          <p>
+                            <?php if(!empty($mensaje)) echo $mensaje; ?>
+                          </p>
+                        </div>
+                      <div class="col-xs-3">
+                      </div>
+                    </div>
+        </form>
       </div>
       <div class="row">
     <div class="col-xs-12">
@@ -163,53 +182,16 @@
                       <td>Internet
                         Explorer 4.0
                       </td>
-                      <td>Win 95+</td>
+                      <td><button type="button" class="btn btn-warning">Clonar</button><button type="button" class="btn btn-info">Actualizar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
                       
                     </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.0
-                      </td>
-                      <td>Win 95+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.5
-                      </td>
-                      <td>Win 95+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 6
-                      </td>
-                      <td>Win 98+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet Explorer 7</td>
-                      <td>Win XP SP2+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet Explorer 7</td>
-                      <td>Win XP SP2+</td>
-                      
-                    </tr>
-                    
-                    
+                   
                     </tbody>
                     <tfoot>
                     <tr>
                       <th>Tipo de Estudio</th>
                       <th>Año fiscal</th>
-                      <th>Acción</th>
+                      <th style="width: 25%;">Acción</th>
                       
                     </tr>
                     </tfoot>
