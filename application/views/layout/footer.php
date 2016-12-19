@@ -12,192 +12,148 @@
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                <p>Will be 23 on April 24th</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-user bg-yellow"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-
-                <p>New phone +1(800)555-1234</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
-                <p>nora@example.com</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                <p>Execution time 5 seconds</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="label label-danger pull-right">70%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Resume
-                <span class="label label-success pull-right">95%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Laravel Integration
-                <span class="label label-warning pull-right">50%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Back End Framework
-                <span class="label label-primary pull-right">68%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
+    <div class="form-group">
+      <h3 class="control-sidebar-heading" style="text-align: center;">Administrar usuarios</h3>
+      <div class="form-group">
+        <label class="control-sidebar-subheading">
+          <a href="#" class="btn btn-block btn-primary btn-sm" style="with:80%;" data-toggle="modal" data-target="#modalcrearusuario">Crear Usuario</a>
+        </label>
+        <label class="control-sidebar-subheading">
+          <a href="#" class="btn btn-block btn-primary btn-sm" style="with:80%;" data-toggle="modal" data-target="#modalupusuario">Actualizar Usuarios</a>
+        </label>
       </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Report panel usage
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Allow mail redirect
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Other sets of options are available
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Expose author name in posts
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Allow the user to show his name in blog posts
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Show me as online
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Turn off notifications
-              <input type="checkbox" class="pull-right">
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Delete chat history
-              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-            </label>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
     </div>
   </aside>
+  <!-- Modal Crear usuario -->
+<div id="modalcrearusuario" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal Contentenido-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Crear Usuario</h4>
+      </div>
+      <div class="modal-body">
+       <form action="<?php echo base_url();?>" method="post">
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="txtci" placeholder="Cedula">
+      </div>
+      <div class="form-group has-feedback">
+      <select name="cborol" class="form-control select2" style="width: 100%;">
+      <option value="disabled" selected="selected">Administrador</option>
+      </select>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="txtnombres" placeholder="Nombres">
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" name="txtpass" placeholder="Contraseña">
+      </div>
+      <div class="row">
+        <!-- /.col -->
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Crear</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form> 
+      </div>
+      
+        
+    </div>
+  </div>
+</div>
+<!-- Modal Fin Crear usuario -->
+<!-- Modal actualizar usuario -->
+<div id="modalupusuario" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal Contentenido-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Actualizar Usuario</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                      <th>Cedula</th>
+                      <th>Rol</th>
+                      <th>Nombres</th>
+                      <th>Contraseña</th>
+                      <th>Acción</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>17870019</td>
+                      <td>Carlos España</td>
+                      <td>Administrador</td>
+                      <td>y373y37eie82782yeue272yye73</td>
+                      <td><a href="#" class="btn btn-block btn-primary btn-sm" style="with:20%;" data-toggle="modal" data-target="#modaleditarusuario" >Editar</a><a href="<?php echo base_url();?>" class="btn btn-block btn-danger btn-sm" style="with:50%;" >Eliminar</a></td>
+                      
+                    </tr>
+                   
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                    <th>Cedula</th>
+                      <th>Rol</th>
+                      <th>Nombres</th>
+                      <th>Contraseña</th>
+                      <th style="width: auto;">Acción</th>
+                      
+                    </tr>
+                    </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Modal Fin actualizar usuario -->
+ <!-- Modal Editar usuario -->
+<div id="modaleditarusuario" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal Contentenido-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Editar Usuario</h4>
+      </div>
+      <div class="modal-body">
+       <form action="<?php echo base_url();?>" method="post">
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control"name="txtcedula" placeholder="Cedula">
+      </div>
+      <div class="form-group has-feedback">
+      <select name="rol" class="form-control select2" style="width: 100%;">
+      <option value="disabled" selected="selected">Administrador</option>
+      </select>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="txtnombres" placeholder="Nombres">
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" name="txtpass" placeholder="Contraseña">
+      </div>
+      <div class="row">
+        <!-- /.col -->
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Editar</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form> 
+      </div>
+      
+        
+    </div>
+  </div>
+</div>
+<!-- Modal Fin Crear usuario -->
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
