@@ -19,7 +19,7 @@ class Ccrearestudio extends CI_Controller
 	public function index(){
 		$data['clientes']=$this->verclientes();
 		$data['tipos']=$this->vertipos();
-		$data['estudios']=$this->Mstudio->estudios($this->session->userdata('s_ID_USUARIO'));
+		$data['estudios']=$this->Mstudio->estudios($this->session->userdata('s_IDUSUARIO'));
 		$this->load->view('layout/header');
 		$this->load->view('layout/menu');
 		$this->load->view('vcrearestudio', $data);
@@ -58,8 +58,8 @@ class Ccrearestudio extends CI_Controller
 	public function verclientes()
 		{
 			
-	  
-		return $this->Mcliente->obtenerClientes();
+	  	$id_usuario=$this->session->userdata('s_IDUSUARIO');
+		return $this->Mcliente->obtenerClientes($id_usuario);
 
 		}
 

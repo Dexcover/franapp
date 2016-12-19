@@ -102,7 +102,7 @@
                   <option selected="selected">Tipo de Estudio</option>
                   <?php foreach ($tipos as $t): ?>
                                   
-                  <option value="<?php echo $c['ID_TIPO']; ?>"> <?php echo $t['N_TIPO']; ?></option>
+                  <option value="<?php echo $t['ID_TIPO']; ?>"> <?php echo $t['N_TIPO']; ?></option>
                   <?php endforeach; ?>
                 </select>
               </div>
@@ -142,7 +142,9 @@
                 <label>Cliente</label>
                 <select class="form-control select2" style="width: 100%;">
                   <option value="disabled" selected="selected">Cliente</option>
-                  
+                   <?php foreach ($clientes as $c): ?>
+                  <option value="<?php echo $c['ID_CLIENTE']; ?>"> <?php echo $c['N_CLIENTE']; ?></option>
+                  <?php endforeach; ?>
                   
                 </select>
               </div>
@@ -156,61 +158,18 @@
                     </tr>
                     </thead>
                     <tbody>
+
+                    <?php foreach ($estudios as $e ): ?>
                     <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 4.0
-                      </td>
-                      <td>Win 95+</td>
+                      <td><?php echo $e['N_TIPO']; ?></td>
+                       <td><?php echo $e['FISCALYEAR']; ?></td>
                       
                     </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.0
-                      </td>
-                      <td>Win 95+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.5
-                      </td>
-                      <td>Win 95+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 6
-                      </td>
-                      <td>Win 98+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet Explorer 7</td>
-                      <td>Win XP SP2+</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet Explorer 7</td>
-                      <td>Win XP SP2+</td>
-                      
-                    </tr>
-                    
+
+                    <?php endforeach ?>
                     
                     </tbody>
-                    <tfoot>
-                    <tr>
-                      <th>Tipo de Estudio</th>
-                      <th>Año fiscal</th>
-                      <th>Acción</th>
-                      
-                    </tr>
-                    </tfoot>
+                   
                   </table>
                 </div>
                 <!-- /.box-body -->

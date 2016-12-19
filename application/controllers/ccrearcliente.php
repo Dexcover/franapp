@@ -43,6 +43,7 @@ public function crearcliente()
 			//do query
 			$this->Mcliente->crearCliente($id_usuario,$n_cliente,$ruc);
 			$data['mensaje']="Cliente Registrado.!";
+			$data['clientes']=$this->Mcliente->obtenerClientes($id_usuario);
 			$this->load->view('layout/header');
 			$this->load->view('layout/menu');
 			$this->load->view('vcrearcliente',$data);

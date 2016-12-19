@@ -12,7 +12,7 @@
                     <div class="box-body">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Nombre del Cliente</label>
-                        <input type="text" class="form-control"  name="nombre_cliente" placeholder="Nombre">
+                        <input type="text" class="form-control"  name="nombre_cliente" placeholder="Nombre" required="TRUE">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail1">Ruc del Cliente</label>
@@ -42,7 +42,9 @@
                 <label>Cliente</label>
                 <select class="form-control select2" style="width: 100%;">
                   <option value="disabled" selected="selected">Cliente</option>
-                  
+                  <?php foreach ($clientes as $c): ?>
+                    <option value="<?php echo $c['ID_CLIENTE']; ?> "> <?php echo $c['N_CLIENTE']; ?></option>
+                  <?php endforeach ?>
                   
                 </select>
               </div>
@@ -59,11 +61,11 @@
                     <tr>
                     
 
-                     <?php foreach ($clientes as $c): ?>
-                    <tr>              
+                  <?php foreach ($clientes as $c): ?>
+                  <tr>              
                   <td><?php echo $c['N_CLIENTE']; ?></td>
                   <td><?php echo $c['RUC']; ?></td>
-                  <td><?php echo $c['ID_USUARIO']; ?></td>
+                  <td><?php echo $c['NOMBRES']; ?></td>
                   </tr>
                   <?php endforeach; ?>
 
