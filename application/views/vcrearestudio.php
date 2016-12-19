@@ -177,15 +177,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 4.0
-                      </td>
+                   
+                       <?php foreach ($estudios as $e ): ?>
+                     <tr>
+                      <td><?php echo $e['N_TIPO']; ?></td>
+                       <td><?php echo $e['FISCALYEAR']; ?></td>
+                      
+                    
+
+                    
                       <td><button type="button" class="btn btn-warning">Clonar</button><button type="button" class="btn btn-info">Actualizar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
                       
                     </tr>
-                   
+                   <?php endforeach ?>
                     </tbody>
                     <tfoot>
                     <tr>
