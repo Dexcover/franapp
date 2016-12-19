@@ -25,7 +25,7 @@ public function crearEstudio($id_usuario,$id_source,$id_cliente,$id_tipo,$num_co
 	{
 		if($id_usuario==1)
 		{
-			$sql = "SELECT TIPO.N_TIPO, estudio.FISCALYEAR FROM estudio, tipo, source, usuarios, actores WHERE\n"
+			$sql = "SELECT TIPO.N_TIPO, estudio.FISCALYEAR FROM ESTUDIO, TIPO, SOURCE, USUARIOS, ACTORES WHERE\n"
 	    . "estudio.ID_USUARIO=usuarios.ID_USUARIO AND\n"
 	    . "estudio.ID_SOURCE=source.ID_SOURCE AND\n"
 	    . "estudio.ID_CLIENTE=actores.ID_CLIENTE AND\n"
