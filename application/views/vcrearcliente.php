@@ -51,7 +51,9 @@
                 <label>Cliente</label>
                 <select class="form-control select2" style="width: 100%;">
                   <option value="disabled" selected="selected">Cliente</option>
-                  
+                   <?php foreach ($clientes as $c): ?>
+                  <option value="<?php echo $c['ID_CLIENTE']; ?>"> <?php echo $c['N_CLIENTE']; ?></option>
+                  <?php endforeach; ?>
                   
                 </select>
               </div>
